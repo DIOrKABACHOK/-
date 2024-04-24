@@ -18,7 +18,8 @@ def install_wsl():
 def open_terminal(question_number):
     try:
         # Открываем терминал Linux
-        os.system(f'gnome-terminal --window bash -c "cd ./Scripts && ./{question_number}.sh"')
+        os.system(f'gnome-terminal -- bash -c "chmod +x ./Scripts/{question_number}.sh"')
+        os.system(f'gnome-terminal -- bash -c ./Scripts/{question_number}.sh')
     finally:
         # Открываем терминал WSL Ubuntu
         os.system(f'start wsl -d Ubuntu bash -c "cd ./Scripts && ./{question_number}.sh"')
@@ -46,7 +47,7 @@ def Intro_list():
     canvas1 = Canvas(win_intro, width=800, height=300, background='yellow')
     canvas1.pack()
     win_info_text = (
-        f'Приветствую в изучении ОП Linux!\n\n'
+        f'Приветствую в изучении ОС Linux!\n\n'
         f'В этом приложении вы изучите основные команды\n'
         f'и примеры их использованиея\n'
         f'Также немного затронем теорию Bash скриптов\n\n'
@@ -62,7 +63,8 @@ def Intro_list():
 def Creators():
     try:
         # Открываем терминал Linux
-        os.system(f'gnome-terminal --window bash -c "./Creators.sh"')
+        os.system(f'gnome-terminal -- bash -c "chmod +x ./Creators.sh"')
+        os.system(f'gnome-terminal -- bash -c ./Creators.sh')
     finally:
         # Открываем терминал WSL Ubuntu
         os.system(f'start wsl -d Ubuntu bash -c "./Creators.sh"')
