@@ -19,7 +19,7 @@ def open_terminal(question_number):
     try:
         # Открываем терминал Linux
         os.system(f'gnome-terminal -- bash -c "chmod +x ./Scripts/{question_number}.sh"')
-        os.system(f'gnome-terminal -- bash -c ./Scripts/{question_number}.sh')
+        os.system(f'gnome-terminal -- bash -c "cd ./Scripts; ./{question_number}.sh"')
     finally:
         # Открываем терминал WSL Ubuntu
         os.system(f'start wsl -d Ubuntu bash -c "cd ./Scripts && ./{question_number}.sh"')
