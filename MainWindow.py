@@ -6,6 +6,26 @@ from tkinter import ttk
 from PIL import Image, ImageTk
 from pygame import mixer
 
+
+class BashDoc:
+    
+    def __init__(self):
+        self.url = "https://www.gnu.org/software/bash/manual/bash.html"
+
+    def open(self):
+        webbrowser.open(self.url)
+
+
+class BashApp(BashDoc):
+    def __init__(self):
+        super().__init__()
+        self.name = "BashDoc App"
+
+    def run(self):
+        print(f"Запуск приложения {self.name}")
+        self.open()
+
+
 class App:
 
     def install_wsl(self):
@@ -411,4 +431,6 @@ class App:
 
 
 if __name__ == "__main__":
+    bash_app = BashApp()
+    bash_app.run()
     app = App()
