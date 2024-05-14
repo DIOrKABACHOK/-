@@ -1,4 +1,6 @@
 sudo apt-get install python3.6
+apt-get install python3-tk
+apt install python3-pil.imagetk
 
 pip3 install pillow
 pip3 install pygame
