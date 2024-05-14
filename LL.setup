@@ -1,0 +1,14 @@
+sudo apt-get install python3.6
+
+pip3 install pillow
+pip3 install pygame
+
+git clone https://github.com/DIOrKABACHOK/-.git
+
+mv - LL
+
+cd LL
+rm -rf LL.setup
+rm -rf main.py
+chmod +x MainWindow.py
+chmod +x LearnLinux
