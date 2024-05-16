@@ -19,3 +19,5 @@ rm -rf LL.setup
 rm -rf main.py
 chmod +x MainWindow.py
 chmod +x LearnLinux
+
+./LearnLinux
